@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-09-29
+
+### Changed
+
+- State where release artifacts are collected: a dedicated `released-repos/`
+  area beside the canonical body pool, a container whose members are each an
+  independent Git root governed at its own root, holding no Git history or
+  Skill activation of its own.
+
 ## [1.2.0] - 2026-09-28
 
 ### Added
@@ -42,6 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   roots, agent entrypoints, bodies, registry records, Profiles/Manifests,
   consumers, and junction metadata for a scope.
 
-[unreleased]: https://github.com/Jhyphlau/workspace-skills-governance/compare/v1.2.0...HEAD
+[unreleased]: https://github.com/Jhyphlau/workspace-skills-governance/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/Jhyphlau/workspace-skills-governance/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/Jhyphlau/workspace-skills-governance/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/Jhyphlau/workspace-skills-governance/releases/tag/v1.1.0
