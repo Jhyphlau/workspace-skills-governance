@@ -2,6 +2,8 @@
 
 The workspace control plane owns execution; this Skill supplies the workflow. Inspect the discovered script for `replace-body` support before using these commands. If unavailable, report that limitation rather than manually editing junctions or registry.
 
+Before upgrading, run an update survey and read each Skill's adaptation level (see [governance-model.md](governance-model.md#adaptation-levels-升级分诊)). `verbatim` and `light` Skills follow this flow; `heavy` Skills need their local adaptations merged onto the new upstream first; `derived` / `local` Skills are not upstream-update targets.
+
 1. Review the source revision, local adaptations and dependency/behavior changes. Import only the selected Skill directory using `import-repo -Source <directory> -Apply`. The import source must be a clean export of the target revision, not a live mirror working tree: `import-repo` copies the whole directory and its fingerprint does not exclude `.git`/`node_modules`, so for a Git mirror export with `git archive <commit>[:<subdir>] | tar -x -C <clean-dir>` (tracked files only) and import that. Confirm the imported body and source contents match, including resources: the legacy import fingerprint does not hash every resource byte. Source updates and imports alone do not deploy anything.
 2. Inspect each affected repository from its own Git root and preserve its state. For this explicitly authorized cross-scope operation, execute the owning workspace's control script from its governance root. The command covers every existing active consumer of one logical name, not all Skills and not newly discovered projects. It preserves Profiles/Manifests and indirect Agent adapters. It has no `-Project` subset mode.
 3. Preview with the exact imported body path:
