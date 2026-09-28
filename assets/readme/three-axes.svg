@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" role="img" aria-label="三条轴:源头不等于激活,激活不等于运行时被发现">
+  <title>三条轴:源头不等于激活,激活不等于运行时被发现</title>
+  <rect width="1200" height="540" rx="24" fill="#0f172a"/>
+  <rect x="0.75" y="0.75" width="1198.5" height="538.5" rx="23.25" fill="none" stroke="#334155" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <text x="72" y="86" font-family="-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif" font-size="30" font-weight="700" fill="#e2e8f0">三条轴,各算各的</text>
+  <text x="72" y="124" font-family="-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif" font-size="19" fill="#64748b">一件事实不能拿来证明另一件</text>
+
+  <g font-family="-apple-system,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif">
+
+    <!-- column 1: 源头 -->
+    <rect x="60" y="160" width="352" height="330" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5"/>
+    <circle cx="96" cy="204" r="8" fill="#38bdf8"/>
+    <text x="116" y="212" font-size="24" font-weight="700" fill="#e2e8f0">源头</text>
+    <text x="116" y="240" font-size="18" fill="#64748b">Provenance</text>
+
+    <text x="88" y="296" font-size="18" font-weight="600" fill="#38bdf8">是</text>
+    <text x="88" y="326" font-size="20" fill="#cbd5e1">可编辑的源,</text>
+    <text x="88" y="354" font-size="20" fill="#cbd5e1">和它导入的 canonical body</text>
+
+    <text x="236" y="394" font-size="22" fill="#475569" text-anchor="middle">≠</text>
+
+    <text x="88" y="428" font-size="18" font-weight="600" fill="#64748b">不等于</text>
+    <text x="88" y="458" font-size="20" fill="#94a3b8">线上正在跑的那一份</text>
+
+    <!-- column 2: 激活 -->
+    <rect x="424" y="160" width="352" height="330" rx="16" fill="#1e293b" stroke="#34d399" stroke-opacity="0.4" stroke-width="1.5"/>
+    <circle cx="460" cy="204" r="8" fill="#34d399"/>
+    <text x="480" y="212" font-size="24" font-weight="700" fill="#e2e8f0">激活</text>
+    <text x="480" y="240" font-size="18" fill="#64748b">Activation</text>
+
+    <text x="452" y="296" font-size="18" font-weight="600" fill="#34d399">是</text>
+    <text x="452" y="326" font-size="20" fill="#cbd5e1">Profile / Manifest 的声明,</text>
+    <text x="452" y="354" font-size="20" fill="#cbd5e1">加上指向 body 的 junction</text>
+
+    <text x="600" y="394" font-size="22" fill="#475569" text-anchor="middle">≠</text>
+
+    <text x="452" y="428" font-size="18" font-weight="600" fill="#64748b">不等于</text>
+    <text x="452" y="458" font-size="20" fill="#94a3b8">某个 Agent 真的加载了它</text>
+
+    <!-- column 3: 发现 -->
+    <rect x="788" y="160" width="352" height="330" rx="16" fill="#1e293b" stroke="#f472b6" stroke-opacity="0.4" stroke-width="1.5"/>
+    <circle cx="824" cy="204" r="8" fill="#f472b6"/>
+    <text x="844" y="212" font-size="24" font-weight="700" fill="#e2e8f0">发现</text>
+    <text x="844" y="240" font-size="18" fill="#64748b">Discovery</text>
+
+    <text x="816" y="296" font-size="18" font-weight="600" fill="#f472b6">是</text>
+    <text x="816" y="326" font-size="20" fill="#cbd5e1">某个 Agent 从某个根,</text>
+    <text x="816" y="354" font-size="20" fill="#cbd5e1">实测加载或调用了它</text>
+
+    <text x="964" y="394" font-size="22" fill="#475569" text-anchor="middle">≠</text>
+
+    <text x="816" y="428" font-size="18" font-weight="600" fill="#64748b">不等于</text>
+    <text x="816" y="458" font-size="20" fill="#94a3b8">文件存在于磁盘上</text>
+  </g>
+</svg>

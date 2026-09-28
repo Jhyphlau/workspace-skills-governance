@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" role="img" aria-label="workspace-skills-governance:源头、激活、发现三轴分离治理">
+  <title>workspace-skills-governance:源头、激活、发现三轴分离治理</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="24" fill="url(#bg)"/>
+  <rect x="0.75" y="0.75" width="1198.5" height="358.5" rx="23.25" fill="none" stroke="#334155" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <g font-family="-apple-system,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif">
+    <text x="72" y="116" font-size="21" letter-spacing="5" fill="#818cf8" font-weight="600">AGENT SKILL GOVERNANCE</text>
+    <text x="72" y="184" font-size="46" font-weight="700" fill="#e2e8f0">workspace-skills-governance</text>
+    <text x="72" y="240" font-size="25" fill="#94a3b8">源头、激活、发现 —— 三轴分离,不凭感觉改</text>
+    <text x="72" y="296" font-size="20" fill="#64748b">一套治理方法 + 一个只读审计脚本</text>
+  </g>
+
+  <g font-family="-apple-system,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif">
+    <rect x="820" y="82" width="308" height="58" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="1.5"/>
+    <circle cx="853" cy="111" r="7" fill="#38bdf8"/>
+    <text x="875" y="120" font-size="22" fill="#e2e8f0">源头 Provenance</text>
+
+    <text x="974" y="164" font-size="24" fill="#64748b" text-anchor="middle">≠</text>
+
+    <rect x="820" y="161" width="308" height="58" rx="13" fill="#1e293b" stroke="#34d399" stroke-opacity="0.55" stroke-width="1.5"/>
+    <circle cx="853" cy="190" r="7" fill="#34d399"/>
+    <text x="875" y="199" font-size="22" fill="#e2e8f0">激活 Activation</text>
+
+    <text x="974" y="243" font-size="24" fill="#64748b" text-anchor="middle">≠</text>
+
+    <rect x="820" y="240" width="308" height="58" rx="13" fill="#1e293b" stroke="#f472b6" stroke-opacity="0.55" stroke-width="1.5"/>
+    <circle cx="853" cy="269" r="7" fill="#f472b6"/>
+    <text x="875" y="278" font-size="22" fill="#e2e8f0">发现 Discovery</text>
+  </g>
+</svg>
