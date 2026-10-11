@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-10-12
+
+### Added
+
+- Upgrade orchestration gates: the declaration gate (`declared` / `verbatim` /
+  `undeclared` / `historical` / `derived`) and the source-identity gate in
+  `upgrade-skill.ps1` are aligned with the survey classification, so package
+  comparison diagnoses changes instead of granting permission.
+- Lightweight acceptance and single-body retirement: acceptance is driven by one
+  minimal real task with recorded evidence; retiring an old baseline requires a
+  retained package, acceptance evidence, and explicit deletion authorization.
+  No scoring, no automatic latest-wins, no whole-library garbage collection.
+- Frozen source references: registered and verified by the control plane.
+
+### Fixed
+
+- SKILL.md now points at the skill's own bundled
+  `scripts/audit-workspace-skills.ps1` instead of a governance-root path that
+  does not exist inside the published package.
+
+### Changed
+
+- Governance contract deduplicated against the skill references; closeout
+  required fields cut to the ones that are actually consumed.
+
 ## [1.2.1] - 2026-09-29
 
 ### Changed
@@ -51,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   roots, agent entrypoints, bodies, registry records, Profiles/Manifests,
   consumers, and junction metadata for a scope.
 
-[unreleased]: https://github.com/Jhyphlau/workspace-skills-governance/compare/v1.2.1...HEAD
+[unreleased]: https://github.com/Jhyphlau/workspace-skills-governance/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/Jhyphlau/workspace-skills-governance/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/Jhyphlau/workspace-skills-governance/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/Jhyphlau/workspace-skills-governance/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/Jhyphlau/workspace-skills-governance/releases/tag/v1.1.0

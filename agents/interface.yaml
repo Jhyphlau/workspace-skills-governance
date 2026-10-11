@@ -1,0 +1,58 @@
+interface:
+  display_name: "Workspace Skills Governance"
+  short_description: "Govern Skill provenance, activation, and runtime discovery as three independent facts"
+  default_prompt: "Use $workspace-skills-governance when governing Skill inventory, installation, updates, lightweight task acceptance, old-baseline cleanup, deduplication, activation, deactivation, relocation, or verification across user, workspace, workbench, and project scopes. Discover the requested scope and its control plane first, keep provenance, activation, and discovery on separate axes, preview every mutation through the discovered control plane, and close out with evidence graded structural, runtime, or external. For upstream upgrades, obey the declaration and source-identity gates; for old-baseline retirement, require a retained package, acceptance evidence, and explicit deletion authorization. Without a control plane, stay read-only and stop at inventory plus a proposed contract."
+  examples:
+    - "盘点这个 workspace 的 Skill，告诉我哪一份是 canonical"
+    - "跟着上游把这几个 Skill 升到最新标签，按门禁走"
+    - "复用这份验收，检查旧基线能不能清理，先只预览"
+    - "治理这个 workspace 的 Skill，先只读盘点，不要改"
+    - "audit my workspace skills and tell me which body is active"
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "claude"
+    - "generic"
+    - "agent-skills-compatible"
+  activation:
+    mode: "model"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "pwsh or Windows PowerShell 5.1 for the bundled audit script"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "read-only audit only; every mutation goes through the discovered control plane with preview"
+    generated_public_claims: "evidence-bound"
+  permissions:
+    network: "none required by the skill itself; upstream fetches belong to the workspace control plane"
+    file_write: "none by the audit script; mutations only through the discovered control plane after preview and decision"
+    subprocess: "read-only audit script; control-plane commands only as the workspace defines them"
+    interactive: "destructive or ambiguous boundary changes require an explicit human decision"
+  degradation:
+    openai: "metadata-adapter"
+    claude: "neutral-source-plus-adapter"
+    generic: "neutral-source"
+    agent-skills-compatible: "canonical-source"
+gates:
+  scaffold:
+    - "SKILL.md frontmatter"
+    - "README hook and natural trigger examples"
+    - "clear exclusions"
+  production:
+    - "agents/interface.yaml"
+    - "evals/trigger_cases.json"
+    - "output contract in references/verification.md"
+    - "install and README verification"
+  library:
+    - "reports/skill-ir.json"
+    - "portability across user, workspace, workbench, and project scopes"
+    - "trust boundary: audit read-only, mutations via control plane"
+  governed:
+    - "preview plus plan hash before every mutation"
+    - "rollback via control-plane recovery points"
+    - "declaration and source-identity gates for upstream upgrades"
+    - "acceptance evidence plus deletion authorization for retirement"
+    - "public claim guard: evidence levels stay separate in reports"

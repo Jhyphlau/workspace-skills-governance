@@ -1,8 +1,8 @@
 {
   "name": "workspace-skills-governance",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "owner": "Jhyphlau",
-  "updated_at": "2026-09-28",
+  "updated_at": "2026-10-12",
   "status": "active",
   "maturity_tier": "governed",
   "lifecycle_stage": "library",
@@ -15,5 +15,18 @@
     "generic",
     "agent-skills-compatible"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "release_gates": [
+    "validate_skill",
+    "trigger_eval",
+    "export_skill_ir",
+    "readme_product_page",
+    "feature_branch_only_publication",
+    "pull_request_review_and_check_gate",
+    "released_version_immutability",
+    "github_release_creation",
+    "npx_discovery_and_clean_install",
+    "secret_scan",
+    "evidence_bound_public_claims"
+  ]
 }
