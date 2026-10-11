@@ -1,0 +1,295 @@
+{
+  "ok": true,
+  "threshold": 0.34,
+  "description_concepts": [
+    "governance_action",
+    "scope",
+    "skill_object"
+  ],
+  "missing_description_concepts": [],
+  "summary": {
+    "total": 21,
+    "passed": 21,
+    "false_positive": 0,
+    "false_negative": 0,
+    "pass_rate": 1.0
+  },
+  "failures": [],
+  "results": {
+    "should_trigger": [
+      {
+        "prompt": "盘点这个 workspace 的 Skill，告诉我哪一份是 canonical",
+        "family": "cn_inventory",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "governance_action",
+          "scope",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "治理这个 workspace 的 Skill，先只读盘点，不要改",
+        "family": "cn_govern_readonly",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "governance_action",
+          "scope",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "跟着上游把这几个技能升级到最新标签，按门禁走",
+        "family": "cn_upgrade",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.667,
+        "matched_concepts": [
+          "governance_action",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "复用这份验收证据，检查这个 Skill 的旧基线能不能退休清理",
+        "family": "cn_retire",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.667,
+        "matched_concepts": [
+          "governance_action",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "把项目作用域里这个 Skill 停用",
+        "family": "cn_deactivation",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "governance_action",
+          "scope",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "同名 Skill 在几个作用域重复了，帮我去重",
+        "family": "cn_dedup",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "governance_action",
+          "scope",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "这个 Skill 的轻量验收怎么做，给我一个最小任务",
+        "family": "cn_acceptance",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.667,
+        "matched_concepts": [
+          "governance_action",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "audit my workspace skills and tell me which body is active",
+        "family": "en_inventory",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "governance_action",
+          "scope",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "upgrade these skills to the latest upstream tag through the control plane",
+        "family": "en_upgrade",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.667,
+        "matched_concepts": [
+          "governance_action",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "verify skill activation across user and project scopes",
+        "family": "en_verify",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "governance_action",
+          "scope",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "retire the old baseline of this skill after acceptance passed",
+        "family": "en_retire",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.667,
+        "matched_concepts": [
+          "governance_action",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "migrate this skill activation to another workspace",
+        "family": "en_migrate",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "governance_action",
+          "scope",
+          "skill_object"
+        ],
+        "negative_pattern": null
+      }
+    ],
+    "should_not_trigger": [
+      {
+        "prompt": "帮我写一个新 skill 来自动化日报",
+        "family": "authoring",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "skill_object"
+        ],
+        "negative_pattern": "写一个新"
+      },
+      {
+        "prompt": "解释一下什么是 canonical body，不用动任何文件",
+        "family": "explain_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": "解释一下"
+      },
+      {
+        "prompt": "把这份治理文档翻译成英文",
+        "family": "translate_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "governance_action"
+        ],
+        "negative_pattern": "翻译"
+      },
+      {
+        "prompt": "发布这个 skill 到 GitHub",
+        "family": "publish_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "skill_object"
+        ],
+        "negative_pattern": "发布这个 skill"
+      },
+      {
+        "prompt": "just explain how skill junctions work",
+        "family": "en_explain",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "skill_object"
+        ],
+        "negative_pattern": "just explain"
+      },
+      {
+        "prompt": "brainstorm a brand-new skill idea with me",
+        "family": "en_brainstorm",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "skill_object"
+        ],
+        "negative_pattern": "brainstorm"
+      }
+    ],
+    "near_neighbor": [
+      {
+        "prompt": "这个 Skill 的 README 帮我润色一下，别的不动",
+        "family": "readme_edit_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "创建一个新的 qiaomu skill 并发布到 GitHub",
+        "family": "create_and_publish",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "skill_object"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "评估一下这个 skill 的输出质量",
+        "family": "output_eval_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.333,
+        "matched_concepts": [
+          "skill_object"
+        ],
+        "negative_pattern": null
+      }
+    ]
+  }
+}

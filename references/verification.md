@@ -20,34 +20,33 @@ Record each level independently as `verified`, `unverified`, or `failed`; never 
 
 Report one row per Agent and launch root. Structural compatibility for `.agents/skills` or `.claude/skills` is not a runtime row and never upgrades `unverified` to `verified`.
 
+## Lightweight task acceptance
+
+Discovery or reading is not task completion. Use one minimal real task with a stated success condition, in a clean Agent restricted to the designated Skill. Record the exact body/entrypoint and version, Agent and launch root, explicit reading versus natural discovery, task input, actual output, checks, extra Skills/tools, and result plus limits. Extra Skill loading means isolation did not pass, even if the output did. A verified explicit-read task does not prove automatic triggering, an independent CLI session, all platforms, or permanent stability.
+
+Reuse existing evidence when it still belongs to the current retained package; do not rerun a passed task just to generate paperwork. The Agent must read and judge that correspondence before preview/apply; uncertainty stops cleanup. Keep evidence in the existing operation closeout, not a new persistent acceptance database. Working notes may carry execution evidence, never policy or provenance authority. Prefer a proven stable baseline, not automatically the highest version or newest timestamp.
+
 ## Recovery requirements
 
 Before a change that can relocate repositories, replace canonical bodies, deactivate consumers, or alter declarations, record:
 
 - exact resolved source and destination paths;
 - Git root, branch/HEAD, status, tracked diff, and untracked inventory where a repository is affected;
-- byte or metadata snapshots for registry, Profile, Manifest, and junction state in scope;
-- a recoverable backup location or prior canonical body identity;
+- the recovery location the control plane emits before switching (for example `registry.before.json` and `replacement.json` under the migration-backups directory) or the prior canonical body identity — the registry is Git-tracked and the tool writes these backups automatically, so no manual registry/Profile/Manifest/junction snapshot is required;
 - the control-plane preview and exact rollback action;
 - post-rollback structural checks and any runtime probes needed to prove recovery.
 
-Keep protected review state unchanged until this evidence exists and the required decision is explicit. Preserve recovery artifacts through closeout.
+Keep protected review state unchanged until this evidence exists and the required decision is explicit. Preserve recovery artifacts through closeout. After lightweight task acceptance, an unused old baseline may end its rollback purpose through an explicitly authorized retirement plan; acceptance alone does not permit deletion. Retirement only stages the package for precommit caught-error recovery, then actually purges it. Report invalidated historical recovery instructions; do not claim the deleted package can still be rolled back. Postcommit purge failure is a partial result, not grounds to re-register a possibly incomplete package.
 
 ## Closeout contract
 
 Return these fields, using `none` or `unverified` instead of omission:
 
 - `status`: `DONE`, `DONE_WITH_CONCERNS`, or `BLOCKED`;
-- `request`: operation and requested scopes;
-- `roots_and_classification`: every affected resolved root and boundary class;
-- `control_plane`: discovered tool/registry or the read-only missing-control-plane warning;
-- `provenance`: source mirrors, source registrations, canonical body identities, and deduplication decisions;
-- `activation`: Profiles, Manifests, consumers, junctions, and before/after counts;
-- `discovery`: per-Agent and per-launch-root `verified|unverified|failed` results;
-- `evidence`: separate structural, runtime, and external results with commands and bounded outcomes;
-- `recovery`: snapshots, backup/rollback path, rollback action, and recovery verification;
 - `protected_state`: dirty, ahead, linked, checkpoint, or deferred items left unchanged;
 - `changes`: files and governance objects changed through the control plane;
 - `warnings_and_deferred_decisions`: unresolved facts, missing authority, and next owner/action.
+
+Report `discovery` (per-Agent and per-launch-root `verified|unverified|failed`) only when a real probe produced evidence; for this workspace it is currently always `unverified`, so it is not a required slot.
 
 Use `DONE_WITH_CONCERNS` when the requested in-scope work is complete but any relevant evidence remains `unverified` or protected/deferred state remains. Use `BLOCKED` when a required decision, control plane, or recovery prerequisite prevents the requested mutation.

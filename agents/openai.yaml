@@ -1,4 +1,4 @@
 interface:
   display_name: "Workspace Skills Governance"
   short_description: "Govern Skill provenance, activation, and verification"
-  default_prompt: "Use $workspace-skills-governance to inventory this scope, classify its boundaries, and govern changes through its existing control plane."
+  default_prompt: "Use $workspace-skills-governance to inspect the requested scope, classify boundaries, and govern changes through its existing control plane. For baseline cleanup, reuse one passed minimal task, preview the exact old package, and do not delete without authorization."

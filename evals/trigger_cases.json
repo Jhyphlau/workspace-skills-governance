@@ -1,0 +1,107 @@
+{
+  "recommended_threshold": 0.34,
+  "description_required_concepts": [
+    "skill_object",
+    "governance_action",
+    "scope"
+  ],
+  "positive_concepts": {
+    "skill_object": [
+      "skill",
+      "skills",
+      "agent skill",
+      "技能",
+      "能力包"
+    ],
+    "governance_action": [
+      "governing",
+      "govern",
+      "inventory",
+      "installation",
+      "install",
+      "update",
+      "updates",
+      "upgrade",
+      "acceptance",
+      "cleanup",
+      "retire",
+      "deduplication",
+      "dedup",
+      "activation",
+      "deactivation",
+      "relocation",
+      "verification",
+      "verify",
+      "audit",
+      "migrate",
+      "migration",
+      "治理",
+      "盘点",
+      "安装",
+      "升级",
+      "更新",
+      "验收",
+      "退休",
+      "清理",
+      "去重",
+      "激活",
+      "停用",
+      "迁移",
+      "核验",
+      "审计"
+    ],
+    "scope": [
+      "user",
+      "workspace",
+      "workbench",
+      "project",
+      "scopes",
+      "scope",
+      "作用域",
+      "工作区",
+      "项目",
+      "用户级"
+    ]
+  },
+  "negative_patterns": [
+    "写一个新",
+    "创建新",
+    "解释一下",
+    "只解释",
+    "翻译",
+    "只要总结",
+    "只总结",
+    "发布这个 skill",
+    "just explain",
+    "translate only",
+    "summarize only",
+    "brainstorm"
+  ],
+  "should_trigger": [
+    { "text": "盘点这个 workspace 的 Skill，告诉我哪一份是 canonical", "family": "cn_inventory" },
+    { "text": "治理这个 workspace 的 Skill，先只读盘点，不要改", "family": "cn_govern_readonly" },
+    { "text": "跟着上游把这几个技能升级到最新标签，按门禁走", "family": "cn_upgrade" },
+    { "text": "复用这份验收证据，检查这个 Skill 的旧基线能不能退休清理", "family": "cn_retire" },
+    { "text": "把项目作用域里这个 Skill 停用", "family": "cn_deactivation" },
+    { "text": "同名 Skill 在几个作用域重复了，帮我去重", "family": "cn_dedup" },
+    { "text": "这个 Skill 的轻量验收怎么做，给我一个最小任务", "family": "cn_acceptance" },
+    { "text": "audit my workspace skills and tell me which body is active", "family": "en_inventory" },
+    { "text": "upgrade these skills to the latest upstream tag through the control plane", "family": "en_upgrade" },
+    { "text": "verify skill activation across user and project scopes", "family": "en_verify" },
+    { "text": "retire the old baseline of this skill after acceptance passed", "family": "en_retire" },
+    { "text": "migrate this skill activation to another workspace", "family": "en_migrate" }
+  ],
+  "should_not_trigger": [
+    { "text": "帮我写一个新 skill 来自动化日报", "family": "authoring" },
+    { "text": "解释一下什么是 canonical body，不用动任何文件", "family": "explain_only" },
+    { "text": "把这份治理文档翻译成英文", "family": "translate_only" },
+    { "text": "发布这个 skill 到 GitHub", "family": "publish_only" },
+    { "text": "just explain how skill junctions work", "family": "en_explain" },
+    { "text": "brainstorm a brand-new skill idea with me", "family": "en_brainstorm" }
+  ],
+  "near_neighbor": [
+    { "text": "这个 Skill 的 README 帮我润色一下，别的不动", "family": "readme_edit_only" },
+    { "text": "创建一个新的 qiaomu skill 并发布到 GitHub", "family": "create_and_publish" },
+    { "text": "评估一下这个 skill 的输出质量", "family": "output_eval_only" }
+  ]
+}
