@@ -1,6 +1,6 @@
-# Creation Handoff — workspace-skills-governance v1.3.0
+# Creation Handoff — workspace-skills-governance v1.3.1
 
-版本: 1.3.0 · 日期: 2026-10-12
+版本: 1.3.1 · 日期: 2026-10-12
 
 ## 参考来源
 

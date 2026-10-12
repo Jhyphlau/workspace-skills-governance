@@ -2,7 +2,7 @@
 name: workspace-skills-governance
 description: Use when governing Skill inventory, installation, updates, lightweight task acceptance, old-baseline cleanup, deduplication, activation, deactivation, relocation, or verification across user, workspace, workbench, and project scopes.
 metadata:
-  version: "1.3.0"
+  version: "1.3.1"
   owner: "Johnny"
   review_cadence: "quarterly, and after any governance-flow or control-plane change"
 ---
